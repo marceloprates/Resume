@@ -266,12 +266,12 @@
         \profilesection{Skills}{1.3cm}
 
     	\begin{itemize}
-    	    \item Deep Learning
-    	    \item DL for computer vision (CNNs) and sequences / language modelling (RNNs)
-    	    \item Neural-Symbolic Reasoning /\\Geometric Deep Learning /\\Graph Neural Networks
-    	    \item Deep Reinforcement Learning
-    	    \item Constraint Satisfaction /\\Combinatorial Optimization
     	    \item Data Science
+    	    \item Deep Learning
+    	    \item Machine Learning for Health
+    	    \item DL for computer vision and sequence / language modelling
+    	    \item Neural-Symbolic Reasoning /\\Geometric Deep Learning /\\Graph Neural Networks
+    	    \item Constraint Satisfaction /\\Combinatorial Optimization
     	\end{itemize}
     
     %------------------------------------------------
@@ -283,7 +283,14 @@
         \begin{tikzpicture}[scale=2]
             \newcounter{a}
             \newcounter{b}
-            \foreach \p/\t in {25/Python, 15/Processing, 15/{C,C++}, 15/Haskell, 10/Julia, 10/Java, 5/JS, 5/Scala, 5/C\#}
+            \foreach \p/\t in {
+            25/Python,
+            15/Julia,
+            15/{C,C++},
+            10/Haskell,
+            10/{Processing},
+            25/{Others}
+            }
               {
                 \setcounter{a}{\value{b}}
                 \addtocounter{b}{\p}
