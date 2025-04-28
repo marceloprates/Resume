@@ -1,0 +1,27 @@
+name: Build CV
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-full biber
+
+    - name: Build CV
+      run: make
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: CV
+        path: output/latest/cv_latest.pdf
