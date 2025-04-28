@@ -18,13 +18,13 @@ jobs:
         sudo apt-get install -y texlive-full biber
 
     - name: Build CV
-      run: make clean
+      run: make
 
     - name: Upload PDF
       uses: actions/upload-artifact@v4
       with:
         name: CV
-        path: output/latest/cv_latest.pdf
+        path: src/resume.pdf
         if-no-files-found: error
 
     - name: Download PDF
