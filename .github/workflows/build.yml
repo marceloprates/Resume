@@ -25,3 +25,9 @@ jobs:
       with:
         name: CV
         path: output/latest/cv_latest.pdf
+
+    - name: Download PDF
+      uses: actions/download-artifact@v2
+      with:
+        name: CV
+        path: downloaded-cv
