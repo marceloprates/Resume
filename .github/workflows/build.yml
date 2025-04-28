@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Install LaTeX
       run: |
@@ -21,13 +21,13 @@ jobs:
       run: make
 
     - name: Upload PDF
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: CV
         path: output/latest/cv_latest.pdf
 
     - name: Download PDF
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: CV
         path: downloaded-cv
