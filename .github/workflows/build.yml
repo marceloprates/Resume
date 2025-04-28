@@ -18,7 +18,7 @@ jobs:
         sudo apt-get install -y texlive-full biber
 
     - name: Build CV
-      run: make
+      run: make all
 
     - name: Upload PDF
       uses: actions/upload-artifact@v4
@@ -27,8 +27,11 @@ jobs:
         path: src/resume.pdf
         if-no-files-found: error
 
-    - name: Download PDF
-      uses: actions/download-artifact@v4
-      with:
-        name: CV
-        path: downloaded-cv
+    - name: Commit and push PDF
+      if: github.event_name == 'push'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add output/*.pdf
+        git commit -m "Update PDF" || echo "No changes to commit"
+        git push

@@ -44,6 +44,10 @@ To build the CV, simply run:
 make
 ```
 
+## Latest CV
+
+[<embed src="output/latest/cv.pdf" width="100%" height="800px" />](output/latest/cv_latest.pdf)
+
 This will:
 1. Compile the LaTeX source
 2. Process any bibliography entries
