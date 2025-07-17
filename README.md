@@ -2,6 +2,10 @@
 
 A professionally typeset CV using LaTeX, with automated builds via GitHub Actions.
 
+Access my most current CV here:
+
+[![Latest CV](https://img.shields.io/badge/PDF-Download-blue?logo=adobeacrobatreader)](https://github.com/marceloprates/Resume/blob/master/output/latest/cv_latest.pdf)
+
 ## Repository Structure
 
 ```
