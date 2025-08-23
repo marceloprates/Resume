@@ -10,6 +10,10 @@
 %% and version 1.3 or later is part of all distributions of LaTeX
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
+
+% Load inputenc before biblatex
+\usepackage[utf8]{inputenc}
+
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{altacv}[2016/12/07 AltaCV v1.1.1, yet another alternative class for a résumé/curriculum vitae.]
 
@@ -22,17 +26,16 @@
 \LoadClass{extarticle}
 
 \RequirePackage[margin=2cm]{geometry}
+% Reintroduced dependency on fontawesome
 \RequirePackage{fontawesome}
 
-%% v1.1: Optionally load academicons
-\if@academicons
-%% Patch to make academicons compilable with XeLaTeX
-\ExplSyntaxOn
-\msg_redirect_name:nnn { fontspec } { font-not-found } { none }
-\ExplSyntaxOff
-\RequirePackage{academicons}
-\newfontfamily{\AI}{academicons.ttf}
-\fi
+% \if@academicons
+% \ExplSyntaxOn
+% \msg_redirect_name:nnn { fontspec } { font-not-found } { none }
+% \ExplSyntaxOff
+% \RequirePackage{academicons}
+% \newfontfamily{\AI}{academicons.ttf}
+% \fi
 
 \RequirePackage{xcolor}
 
