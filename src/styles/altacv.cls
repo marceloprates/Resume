@@ -143,10 +143,10 @@
   \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
-\newcommand{\cvskill}[2]{%
+\newcommand{\cvskill}[3]{%
   \textcolor{emphasis}{\textbf{#1}}\hfill
   \foreach \x in {1,...,5}{%
-  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\faCircle}}\par%
+  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{#3}}\faCircle}}\par%
 }
 
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226
