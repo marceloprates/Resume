@@ -1,0 +1,28 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+
+# Output directory except latest version
+output/*
+!output/latest/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+src/extra.tex
